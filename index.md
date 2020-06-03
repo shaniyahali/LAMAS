@@ -1,37 +1,22 @@
-## Welcome to GitHub Pages
+---
+layout: default
+---
 
-You can use the [editor on GitHub](https://github.com/shaniyahali/LAMAS/edit/master/index.md) to maintain and preview the content for your website in Markdown files.
+# Introduction
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+The card game **I Doubt it**, also popularly known as “Bluff” is a multiplayer game. The goal of each player is to get rid of all of their cards. It is a game where the ability to deceive other players at the same time detect other players’ deception comes into play. Each player gets to place some face down, and make an announcement which need not be truthful. Decision needs to be made based on previous knowledge as well as the last player’s announcement to call out a bluff or not. The included dynamic of lying makes the game an interesting one to analyze from the perspective of player’s knowledge, common knowledge, belief and Public announcement logic.
 
-### Markdown
+# Rules
+ > The goal is to be the first player to get rid of all their cards. When a player puts their last card on the table and either is not doubted or, upon being doubted, is shown to have announced correctly, they win the game
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+ \- [Bicycle Cards website](https://bicyclecards.com/how-to-play/i-doubt-it/)
 
-```markdown
-Syntax highlighted code block
+A detailed description of the game can be found on the reference website.
 
-# Header 1
-## Header 2
-### Header 3
+# Restrictions
+In our implementation of the game, we use a smaller version to simplify the game mechanics as follows:
+* players in the game can be between 2-10 but we only consider 3 players
 
-- Bulleted
-- List
+* original deck size of 52 cards is reduced to 6 cards where the value is from Ace, 2, and 3 with 2 cards each of suit heart and spades. This way each player gets 2 cards each.
 
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/shaniyahali/LAMAS/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+We implemented one play of game, where each player gets 2 cards. Each player puts either one or both cards face down and makes an announcement about the value of the cards. The other players can either doubt this announcement, based on their current knowledge and common knowledge, or update their knowledge and make a decision about their strategy to play.
