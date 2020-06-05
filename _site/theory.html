@@ -12,15 +12,17 @@
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="LAMAS Project 2020" />
 <meta property="og:description" content="LAMAS Project 2020" />
+<link rel="canonical" href="http://localhost:4000/LAMAS/theory.html" />
+<meta property="og:url" content="http://localhost:4000/LAMAS/theory.html" />
 <meta property="og:site_name" content="I Doubt It - A Game Analysis" />
 <script type="application/ld+json">
-{"headline":"I Doubt It - A Game Analysis","description":"LAMAS Project 2020","@type":"WebPage","url":"/theory.html","@context":"https://schema.org"}</script>
+{"@type":"WebPage","url":"http://localhost:4000/LAMAS/theory.html","headline":"I Doubt It - A Game Analysis","description":"LAMAS Project 2020","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#157878">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <link rel="stylesheet" href="/assets/css/style.css?v=">
+    <link rel="stylesheet" href="/LAMAS/assets/css/style.css?v=">
   </head>
   <body>
     <a id="skip-to-content" href="#content">Skip to the content.</a>
@@ -46,8 +48,26 @@
 
     <main id="content" class="main-content" role="main">
       <h1 id="theory">Theory</h1>
+<p>The game was built using the model of manipulative lying proposed by Wang et al.(2011), which is based on the logic of communication and change by Benthem et al. (2005).Communication between agents implies changes in the world and the knowledge of agents. The communication takes place as actions in an epistemic model, hence influencing knowledge and belief of the agents. The actions in our game are public annoucements made by the players.</p>
 
-<p>something</p>
+<h2 id="lying-in-public-announcements">Lying in public announcements</h2>
+<p>The public annoucement in our game follow deception and manipulating the other agents into believing a lie. Generally, if an annoucement <img src="https://latex.codecogs.com/svg.latex?%5Cphi" alt="phi" /> is made, then the belief of each agent is rightly updated to <img src="https://latex.codecogs.com/svg.latex?%5Cphi" alt="phi" />, and similarly for <img src="https://latex.codecogs.com/svg.latex?%5Cneg%20%5Cphi" alt="negphi" />. In manipulation however, the agent lies that and misleads the public to believe <img src="https://latex.codecogs.com/svg.latex?%5Cphi" alt="phi" />. So, there are two possible annoucement actions:</p>
+<ul>
+  <li>Announcing <img src="https://latex.codecogs.com/svg.latex?%5Cphi" alt="phi" /> when it is true, hence all updates are true</li>
+  <li>Lying <img src="https://latex.codecogs.com/svg.latex?%5Cphi" alt="phi" /> is true when it is false, hence manipulating the public’s belief</li>
+</ul>
+
+<h2 id="axioms-of-lying">Axioms of lying</h2>
+<p>Taking the notations defined by Wang et al.(2011), lying is denoted as <img src="https://latex.codecogs.com/svg.latex?%5Ctextexclamdown%20%5Cphi" alt="lie" /> and truthful public annoucement as <img src="https://latex.codecogs.com/svg.latex?%21%20%5Cphi" alt="true" />. Together, the two are referenced as manipulative update <img src="https://latex.codecogs.com/svg.latex?%5Cddagger%20%5Cphi" alt="manipulate" />.</p>
+
+<p>The axioms of manipulative update are the KD45 axioms system with the rules for belief <img src="https://latex.codecogs.com/svg.latex?B_i" alt="belief" />. The axioms for lying are as follows:</p>
+<ul>
+  <li><img src="https://latex.codecogs.com/svg.latex?%5B%5Ctextexclamdown%20%5Cphi%5D%20%5Cpsi%20%5Cleftrightarrow%20%5Cneg%20%5Cphi%20%5Crightarrow%20%5Cpsi" alt="axiom1" /></li>
+  <li><img src="https://latex.codecogs.com/svg.latex?%5B%5Ctextexclamdown%20%5Cphi%5D%20%5Cneg%20%5Cpsi%20%5Cleftrightarrow%20%5Cneg%20%5Cphi%20%5Crightarrow%20%5B%5Ctextexclamdown%20%5Cphi%5D%20%5Cneg%20%5Cpsi" alt="axiom2" /></li>
+  <li><img src="https://latex.codecogs.com/svg.latex?%5B%5Ctextexclamdown%20%5Cphi%5D%20%5Cneg%20%28%5Cpsi_1%20%5Cland%20%5Cpsi_2%29%20%5Cleftrightarrow%20%5B%5Ctextexclamdown%20%5Cphi%5D%20%5Cpsi_1%20%5Cland%20%5B%5Ctextexclamdown%20%5Cphi%5D%20%5Cpsi_2" alt="axiom3" /></li>
+  <li><img src="https://latex.codecogs.com/svg.latex?%5B%5Ctextexclamdown%20%5Cphi%5D%20B_i%20%5Cpsi%20%5Cleftrightarrow%20%5Cneg%20%5Cphi%20%5Crightarrow%20B_i%20%5B%21%20%5Cphi%5D%20%5Cpsi" alt="axiom4" /></li>
+</ul>
+
 
 
       <footer class="site-footer">
